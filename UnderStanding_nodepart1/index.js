@@ -42,3 +42,75 @@ hellow("This from app.js")
 //Writing different types of functions: function with no parameter, function with parameter, 
 //function with no return type, functions with return type (string, int, array, etc),
 // anonymous functions, function with callback, recursive functions. [Day 3]
+
+
+//function without parameter and it does not return it will only log the data
+function helloWorld() { // this is my function declaration
+    console.log("Hello This is my No function parameter")
+    }
+    
+    helloWorld();
+    
+    //function with parameters
+    // it can take more than one parameter if we want it return float number
+    function area(radius) {
+        const pi = 3.14;
+        return pi*radius*radius;
+    }
+    
+    const areaCircle = area(4);
+    console.log(areaCircle)
+    
+    //return string
+    function fullName(fname) {
+    return fname;
+    }
+    const fullNameofPrithvi = fullName("Prithvinarayan");
+    console.log(fullNameofPrithvi)
+    
+    //return array in the function
+    function cricketStadium(arr){
+        return arr;
+    
+    }
+    const indianCricketStadium = cricketStadium(["Wankhedty","modistadius","xyz"])
+    console.log(indianCricketStadium);
+    
+    //anonymous function -> a function without name called as a anonymous function
+    
+    const add = function (a,b) {
+        return a+b;
+    }
+    const addOfTwoNum = add(3,4);
+    console.log(addOfTwoNum);
+    
+    //call backfunction a function will  which call inside the function setTimeout()is the node js provided call back function
+     setTimeout(function(){
+    console.log("I will call after 3 sec")
+     },3000)
+    
+    
+     //example 2
+     function createQuote(quote, callback){ 
+        var myQuote = "Like I always say, " + quote;
+        callback(myQuote); 
+      }
+      
+      function logQuote(quote){
+        console.log(quote);
+      }
+      
+      createQuote("eat your vegetables!", logQuote);
+    
+      //recursive function
+    //Recursive Function is a function call it self some where inside the function A calling function over and over again 
+    
+    function countDownNumbers(n){
+    if(n<=0) {
+        console.log("Yeah we got it");
+        return
+    } 
+    console.log("number"+n)
+    countDownNumbers(n-1);
+    }
+    countDownNumbers(3)

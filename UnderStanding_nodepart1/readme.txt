@@ -39,3 +39,29 @@ object having array function,another object and int and string etc
 > The importance of use strict come in the mordern java script
 > It catches some common coding bloopers, throwing exceptions.
 > always use strict begining of program
+//exporting function
+> export funcction means the you can access the function from other directory.
+> you have to module.exports = <function name>
+> import the require('<filename>,<relative direcotry>')
+
+##Writing different types of functions: function with no parameter, 
+function with parameter, function with no return type, functions with return type (string, int, array, etc), a
+nonymous functions, function with callback, recursive functions. [Day 3]
+
+//function with no parameter
+>it is normal function it dont takes the argument
+>it will simply return of log file in given body.
+>function will declare with function key word function <function_name>()
+
+//function with parameter
+>it takes the parameter such as array, object, num, string etc
+>function <function_name> (<parameter>)
+
+//anonymous function
+anonymous function -> a function without name called as a anonymous function
+
+//call backfunction 
+> a function will  which call inside the function setTimeout()is the node js provided call back function
+
+//recursive function
+//Recursive Function is a function call it self some where inside the function A calling function over and over again 
