@@ -1,0 +1,12 @@
+{
+  "name": "UnderStanding_nodepart1",
+  "version": "1.0.0",
+  "description": "1 we have to run cmd sudo apt install nodejs but in my machie node is already install 12.13 to check version node -version 2 we have to init node package in root folder 3 to run the index.js cmd is node index.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
