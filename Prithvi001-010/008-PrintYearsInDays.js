@@ -10,4 +10,4 @@ function ageInDays(age) {
     const ageInDays = age * 365;
     console.log(`He Spent ${ageInDays} Days.`);
 }
-ageInDays(19, "Prithvi")
+ageInDays(19)
