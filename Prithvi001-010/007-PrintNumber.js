@@ -8,6 +8,7 @@ function incrementingFun(p, n) {
         console.log(p);
         p = p + 2;
     }
+    console.log(p - 2);
 }
 
-incrementingFun(2, 3)
+incrementingFun(5, 3)
