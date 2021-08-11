@@ -9,16 +9,18 @@
 
 
 function messagePass(msg, isRecursive, timeout) {
-    setTimeout(() => {
-        console.log(msg);
-    }, timeout)
 
     if (isRecursive) {
-        setInterval(() => {
+        setInterval(() => {// if I set isRecusrive is true then it will call automaticlly every 1 second as w
             console.log(msg);
         }, timeout)
-
     }
+    else if (isRecursive === false) {// if I set isRecursive flat flase it will call setTimeout() 
+        setTimeout(() => {
+            console.log("I will on call When isRecursive is false");
+        }, timeout)
+    }
+
 }
-messagePass("i am from function", true, 1000)
+messagePass("I will call continously when isRecursive is true", false, 1000)
 
