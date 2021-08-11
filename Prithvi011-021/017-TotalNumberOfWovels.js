@@ -4,15 +4,17 @@
 
 function numberOfVowelsConsonentCount(string) {
     let vCount = 0, cCount = 0;
-    for (let i = 0; i <= string.length; i++) {
-        if (string.charAt(i) == 'a' || string.charAt(i) == 'e' || string.charAt(i) == 'i' || string.charAt(i) == 'o' || string.charAt(i) == 'u') {
+    const lowerCaseAlphabate = string.toLowerCase()//It will make my capital letter to small later
+    console.log(lowerCaseAlphabate);
+    const vowels = ['a', 'e', 'i', 'o', 'u']// include function can pick up only spesific sitrin or charact from sitr or array
+    for (let i = 0; i <= lowerCaseAlphabate.length - 1; i++) {
+        if (vowels.includes(lowerCaseAlphabate[i])) {
             vCount++;
-        } else if (string.charAt(i) >= 'a' && string.charAt(i) <= 'z') {
-
+        } else {
             cCount++;
         }
     }
     console.log("Number Of of Vowels " + vCount);
     console.log("Number Of consonent " + cCount);
 }
-numberOfVowelsConsonentCount("prithvi")
+numberOfVowelsConsonentCount("Prithvi")
