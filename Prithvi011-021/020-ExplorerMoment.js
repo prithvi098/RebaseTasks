@@ -88,3 +88,39 @@ moment([2010, 1, 14, 15, 25, 50, 125]); // February 14th, 3:25:50.125 PM
 moment([2010]);        // January 1st
 moment([2010, 6]);     // July 1st
 moment([2010, 6, 10]); // July 10th 3rd elements shows date and second shows month and first elementest shows year
+
+
+///try performing conversions from a date in one format string to another
+const dateObj = {
+    date: "25-06-2021",
+    date1: "2/06/2021"
+}
+console.log(moment().format('MM/DD/YYYY')); //08/12/2021
+console.log(moment().format('DD/MM/YYYY')); //12/08/2021
+console.log(moment().format('YYYY/MM/DD')); //2021/08/12
+console.log(moment().format('YYYY/DD/MM')); //2021/12/08
+console.log(moment("20111031").format('YYYY-MM-DD'));   //2011-10-31
+console.log(moment("20111031").format('YYYY Do MMMM'));  //2011 31st October
+console.log(moment(dateObj.date, 'DD-MM-YYYY').format('YYYY Do MMMM'));  //2021 25th June
+console.log(moment(dateObj.date1, 'YYYY-DD-MM').format('dddd, YYYY Do MMMM'));//invalid date because it took year as month or date
+console.log(moment(dateObj.date1, 'MM-DD-YYYY').format('DD/MM/YYYY dddd, YYYY Do MMMM')); //it will print 6th feb
+
+
+//Unix Timestamp(millisecond)
+// you can create a moment by passing an integer value representing the number of milliseconds since the Unix Epoch (Jan 1 1970 12AM UTC).
+//it will count miliseconds from 1 jan 1970
+console.log("Mili Seconds since epoce time " + moment(1628745420000).format('YYYY Do MMMM hh:mm:ss'));
+//Unix Timestap(seconds) since from 1st jan 1970
+console.log("Mili Seconds since epoce time " + moment.unix(1628745593).format('YYYY Do MMMM hh:mm:ss'))
+
+
+//TC, or Universal Time Coordinated, is the most precise and commonly referred to time standard. 
+//Since the 1970s, this time standard has been globally used as the most precise time standard,
+// instead of formerly used GMT standard, which has turned now into a regular time zone
+
+// By default, moment parses and displays in local time.
+// If you want to parse or display a moment in UTC, you can use moment.utc() instead of moment().
+// This brings us to an interesting feature of Moment.js. UTC mode.
+// While in UTC mode, all display methods will display in UTC time instead of local time.
+console.log(moment().format());     //2021-08-12T10:54:13+05:30
+console.log(moment.utc().format()); // 2021-08-12T05:24:42Z  //UTC is replaced with Z that is the zero UTC offset

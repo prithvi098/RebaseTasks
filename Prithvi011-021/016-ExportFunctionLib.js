@@ -12,7 +12,7 @@
 const arithmeticExp = require('./015-ImplementingCalculator')
 // const sum = add(4, 5);
 // console.log(sum)
-const string = "8 + 4 - 2 / 5 * 2"
+const string = "8 + 4 - 2"
 const arrayOperator = string.split(" ")
 console.log(arrayOperator);
 let result;
@@ -30,4 +30,3 @@ for (let i = 0; i <= arrayOperator.length - 5; i += 2) {
     result = arithmeticExp(Number(result), arrayOperator[i + 3], Number(arrayOperator[i + 4]))
     console.log(result);
 }
-
