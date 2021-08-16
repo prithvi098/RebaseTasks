@@ -1,0 +1,21 @@
+'use strict'
+//It provides us to developer to avoid accidental errors
+// 22.Write a function that returns the validity of strings based on certain regex expressions defined.
+// Regex for allowing strings to contain only alphanumeric characters
+// Regex for validating a string to be a valid email address
+// Regex for determining if a password has at least 1 uppercase character, 1 lowercase character, 1 special character from (_, $, #, @, &), and the overall length of the password is greater than 8 characters.
+// Regex to determine if the given string has at least 3 vowels
+// Regex to determine if the given string is a valid html tag syntax
+// Ha HaHa
+// Alphanumericals are a combination of alphabetical and numerical characters, 
+//Regular expressions are patterns used to match character combinations in strings
+
+//Regex to determine if the given string is a valid html tag syntax
+const regex = function (string) {
+    const first_name = "Raku"
+    
+}
+console.log(regex("Prithvinarayn@1%23"));
+321-555-4321
+123.555.1234
+123*555*1234
